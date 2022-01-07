@@ -1,0 +1,49 @@
+<section class="hero is-link is-small">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <%= link_to root_path, class: 'navbar-item' do %>
+            <svg fill='#ffffff' xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+              <title>rice</title>
+                <line x1="50.224" y1="19.108" x2="60" y2="2" stroke="#ffffff" stroke-linecap="butt"></line>
+                <line x1="43.61" y1="20.5" x2="48" y2="4" stroke="#ffffff" stroke-linecap="butt"></line>
+                <circle cx="13.5" cy="11.5" r="1.5" fill="#ffffff" stroke="none">
+                </circle> <circle cx="26.5" cy="24.5" r="1.5" fill="#ffffff" stroke="none"></circle>
+                <circle cx="33.5" cy="8.5" r="1.5" fill="#ffffff" stroke="none"></circle>
+                <path d="M19.394,57H44.606A27.993,27.993,0,0,0,60,32H4A27.993,27.993,0,0,0,19.394,57Z"></path> <path d="M56,26a7,7,0,0,0-12.009-4.885A7.984,7.984,0,0,0,32.147,18.65,7,7,0,0,0,19.19,20.4,6.991,6.991,0,0,0,8,26" stroke="#ffffff"></path>
+              </svg>
+            <span class='has-text-weight-bold is-size-4 ml-4'>Foodlog</span>
+          <% end %>
+          <span class="navbar-burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <span class='navbar-item'>
+              <%= link_to "Create new entry", new_entry_path, class:"button is-success" %>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        <% if content_for:title %>
+          <%= yield :title %>
+        <% else %>
+          Food Log
+        <% end %>
+      </h1>
+    </div>
+  </div>
+
+</section>
